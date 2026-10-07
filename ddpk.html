@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Perangkat Pembelajaran DKV Blok 2: Adobe Photoshop Dari Nol</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body class="h-full bg-slate-900 text-slate-100 font-sans antialiased flex flex-col">
+
+    <header class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 text-white p-2 rounded-xl font-bold tracking-wider shadow-inner">DKV</div>
+                <div>
+                    <h1 class="text-base sm:text-lg font-bold text-white tracking-wide">Blok 2: Photoshop Dari Nol (9 Minggu)</h1>
+                    <p class="text-xs text-slate-400 hidden sm:block">Konsentrasi Keahlian Desain Komunikasi Visual (SMK)</p>
+                </div>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button onclick="switchTab('overview')" id="btn-overview" class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-indigo-600 text-white transition hover:bg-indigo-500 shadow">Overview</button>
+                <button onclick="switchTab('weeks')" id="btn-weeks" class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-slate-700 text-slate-300 transition hover:bg-slate-600 shadow">9 Minggu</button>
+                <button onclick="switchTab('rubric')" id="btn-rubric" class="px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-slate-700 text-slate-300 transition hover:bg-slate-600 shadow">Rubrik</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 sm:p-6 lg:p-8 overflow-y-auto">
+
+        <!-- OVERVIEW TAB -->
+        <div id="tab-overview" class="space-y-6">
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-xl">
+                <div class="inline-block bg-indigo-500/20 text-indigo-400 text-xs font-semibold px-3 py-1 rounded-full mb-3">Kurikulum Semester Ganjil 2026 (Sistem Blok)</div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">Perangkat Pembelajaran Blok 2: Dari Teori Gambar Umum hingga Portofolio Industri</h2>
+                <p class="text-slate-300 leading-relaxed text-sm sm:text-base mb-6">
+                    Dirancang khusus untuk peserta didik SMK Program Keahlian Desain Komunikasi Visual (DKV) yang baru memulai pembelajaran dari nol di Blok 2 tanpa materi prasyarat Blok 1. Alur logika mutlak: <strong>Hakikat Gambar Umum</strong> &rarr; <strong>Bitmap vs Vektor & Parameter Digital</strong> &rarr; <strong>Pengoperasian Adobe Photoshop dari Nol</strong> &rarr; <strong>Manipulasi Non-Destruktif & Komposisi</strong> &rarr; <strong>Proyek Utama & Portofolio Digital</strong>.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 pt-4 border-t border-slate-700/60">
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 text-center">
+                        <span class="block text-2xl font-bold text-indigo-400">9 Minggu</span>
+                        <span class="text-xs text-slate-400">Durasi Efektif Blok 2</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 text-center">
+                        <span class="block text-2xl font-bold text-indigo-400">18 Pertemuan</span>
+                        <span class="text-xs text-slate-400">Total Sesi Belajar</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 text-center">
+                        <span class="block text-2xl font-bold text-indigo-400">4 TP Utama</span>
+                        <span class="text-xs text-slate-400">Taksonomi SOLO Relasional</span>
+                    </div>
+                    <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50 text-center">
+                        <span class="block text-2xl font-bold text-indigo-400">1 Portofolio</span>
+                        <span class="text-xs text-slate-400">Produk Akhir Industri</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-lg">
+                <h3 class="text-xl font-bold text-indigo-400 mb-4">Tujuan Pembelajaran (Taksonomi SOLO - Relasional)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-700/50 space-y-2">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300">Minggu 1</span>
+                        <h4 class="font-bold text-white text-base">TP 1: Konseptual Gambar, Bitmap & Parameter Digital</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">Menganalisis hakikat dan fungsi gambar dalam komunikasi visual, membedakan raster vs vektor, serta menghitung resolusi (PPI) dan mode warna (RGB/CMYK).</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-700/50 space-y-2">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300">Minggu 2 & 3</span>
+                        <h4 class="font-bold text-white text-base">TP 2: Antarmuka & Seleksi Dasar</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">Mengoperasikan workspace Photoshop, setup dokumen baru, serta melakukan seleksi dan transformasi objek secara presisi.</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-700/50 space-y-2">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300">Minggu 4 - 7</span>
+                        <h4 class="font-bold text-white text-base">TP 3: Manipulasi, Non-Destructive & Komposisi</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">Mengorganisasikan hierarki layer, layer mask, blend mode, retouching, color correction, dan tipografi poster komersial.</p>
+                    </div>
+                    <div class="bg-slate-900/60 p-5 rounded-xl border border-slate-700/50 space-y-2">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded bg-indigo-500/20 text-indigo-300">Minggu 8 & 9</span>
+                        <h4 class="font-bold text-white text-base">TP 4: Proyek Utama & Portofolio Digital</h4>
+                        <p class="text-sm text-slate-300 leading-relaxed">Memproduksi composite image melalui riset brief & moodboard, peer review, ekspor publikasi, dan penyusunan portofolio digital industri.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEEKS TAB -->
+        <div id="tab-weeks" class="hidden space-y-6">
+            <div class="flex items-center space-x-2 overflow-x-auto pb-2 scrollbar-thin">
+                <button onclick="selectWeek(1)" id="btn-w1" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-indigo-600 text-white shadow-md">Minggu 1</button>
+                <button onclick="selectWeek(2)" id="btn-w2" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 2</button>
+                <button onclick="selectWeek(3)" id="btn-w3" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 3</button>
+                <button onclick="selectWeek(4)" id="btn-w4" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 4</button>
+                <button onclick="selectWeek(5)" id="btn-w5" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 5</button>
+                <button onclick="selectWeek(6)" id="btn-w6" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 6</button>
+                <button onclick="selectWeek(7)" id="btn-w7" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 7</button>
+                <button onclick="selectWeek(8)" id="btn-w8" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 8</button>
+                <button onclick="selectWeek(9)" id="btn-w9" class="week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700">Minggu 9</button>
+            </div>
+
+            <!-- Week Content Container -->
+            <div id="week-content-container" class="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-xl">
+                <!-- Dynamically injected via JS -->
+            </div>
+        </div>
+
+        <!-- RUBRIC TAB -->
+        <div id="tab-rubric" class="hidden space-y-6">
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 sm:p-8 shadow-xl">
+                <h2 class="text-xl sm:text-2xl font-bold text-white mb-2">Rubrik Penilaian Komprehensif (Skala 1 - 4)</h2>
+                <p class="text-slate-400 text-sm mb-6">Digunakan untuk mengevaluasi seluruh penugasan praktik, LKPD, dan proyek besar peserta didik SMK DKV.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm text-slate-300 border-collapse min-w-[700px]">
+                        <thead>
+                            <tr class="border-b border-slate-700 text-indigo-400 bg-slate-900/50">
+                                <th class="p-3">Aspek Penilaian</th>
+                                <th class="p-3">Skor 1 (Kurang)</th>
+                                <th class="p-3">Skor 2 (Cukup)</th>
+                                <th class="p-3">Skor 3 (Baik)</th>
+                                <th class="p-3">Skor 4 (Sangat Baik)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-700">
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Pemahaman Konsep</td>
+                                <td class="p-3">Gagal memahami konsep dasar (bitmap, resolusi, layer).</td>
+                                <td class="p-3">Memahami konsep dasar namun masih keliru dalam aplikasinya.</td>
+                                <td class="p-3">Memahami konsep dengan baik dan akurat.</td>
+                                <td class="p-3">Sangat menguasai konsep dan mampu menganalisis kasus secara mandiri.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Penguasaan Tools</td>
+                                <td class="p-3">Sering kebingungan menggunakan perangkat dasar Photoshop.</td>
+                                <td class="p-3">Mampu menggunakan perangkat utama dengan panduan.</td>
+                                <td class="p-3">Menguasai perangkat utama dengan lancar dan rapi.</td>
+                                <td class="p-3">Sangat mahir, mengeksplorasi fitur lanjutan, kerja profesional.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Ketepatan Teknik</td>
+                                <td class="p-3">Banyak cacat teknis (seleksi bocor, warna kusam).</td>
+                                <td class="p-3">Teknik cukup baik namun ada detail tepi/pencahayaan terlewat.</td>
+                                <td class="p-3">Teknik pengerjaan rapi, sesuai standar industri digital.</td>
+                                <td class="p-3">Teknik presisi tinggi tanpa cela, standar kualitas agensi.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Kreativitas & Komposisi</td>
+                                <td class="p-3">Tata letak monoton, asal tempel, tanpa hierarki teks.</td>
+                                <td class="p-3">Komposisi standar, kontras warna kurang/berlebihan.</td>
+                                <td class="p-3">Komposisi harmonis, tipografi terbaca jelas, estetika terjaga.</td>
+                                <td class="p-3">Sangat kreatif, inovatif, artistic value tinggi, komunikatif.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Proses & Portofolio</td>
+                                <td class="p-3">Tidak disiplin, tanpa sketsa/moodboard, tugas tidak lengkap.</td>
+                                <td class="p-3">Mengikuti tahapan dengan dorongan guru berkala.</td>
+                                <td class="p-3">Mengikuti seluruh tahapan dari riset hingga finalisasi tertib.</td>
+                                <td class="p-3">Inisiatif tinggi, etos kerja profesional, portofolio istimewa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const weeksData = {
+            1: {
+                title: "Minggu 1 (Pertemuan 1 & 2): Hakikat Gambar, Bitmap vs Vektor, & Parameter Digital",
+                tp: "Peserta didik mampu menganalisis hakikat dan fungsi gambar secara umum, membedakan karakteristik gambar raster (bitmap) dan vektor, serta memahami parameter resolusi (PPI) dan mode warna digital.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Hakikat Gambar sebagai Media Komunikasi Visual:</strong> Gambar bukan sekadar coretan estetik, melainkan bahasa universal untuk menyampaikan pesan, gagasan, dan emosi tanpa batasan bahasa verbal. Sejak era purbakala hingga era digital modern, gambar berfungsi sebagai alat edukasi, persuasi, identitas merek (branding), dan penciptaan nilai komersial.</p>
+                        <p class="leading-relaxed"><strong>2. Konsep Fundamental: Bitmap (Raster) vs Vektor:</strong><br>
+                        - <em>Bitmap (Raster):</em> Dibangun dari sekumpulan grid titik warna atau piksel individual yang tersusun dalam koordinat tertentu. Sangat realistis untuk foto kamera, namun akan pecah, buram, atau berkotak-kotak (pixelated) apabila ukurannya diperbesar secara ekstrem melampaui batas piksel aslinya (Format: JPEG, PNG, PSD, TIFF).<br>
+                        - <em>Vektor:</em> Dibangun berdasarkan perhitungan matematis berupa titik, garis, kurva (Bézier curve), dan poligon. Dapat diperbesar atau diperkecil hingga ukuran tak terhingga tanpa mengalami penurunan kualitas sedikit pun (Format: AI, CDR, SVG, EPS).</p>
+                        <p class="leading-relaxed"><strong>3. Parameter Digital Dokumen (Resolusi & Mode Warna):</strong><br>
+                        - <em>Resolusi (PPI - Pixels Per Inch):</em> Menunjukkan kepadatan piksel dalam setiap inci persegi. Standar layar digital adalah 72 PPI, sedangkan standar cetak berkualitas tinggi adalah 300 PPI.<br>
+                        - <em>Mode Warna:</em> RGB (Red, Green, Blue) berbasis cahaya untuk monitor/gadget. CMYK (Cyan, Magenta, Yellow, Black) berbasis tinta cetak untuk mesin cetak offset.</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional & Hubungan Dunia Kerja:</strong> Desainer grafis di agensi sering menghadapi klien mencetak baliho raksasa menggunakan foto WhatsApp 72 PPI yang pecah total. Memahami parameter ini di awal adalah pertahanan profesional pertama seorang desainer.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD TEORI MINGGU 1 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Analisis Hakikat Gambar, Bitmap vs Vektor, & Parameter Digital</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Sesi Teori & Diskusi</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Klien memesan baliho promosi perumahan berukuran 5 meter. Klien mengirim foto WhatsApp beresolusi 72 PPI ukuran 100 KB. Hasil cetak pecah dan buram. Analisis secara teknis!</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Dokumen</strong>
+                            <div class="flex items-center justify-center space-x-6 p-4 bg-slate-900 rounded border border-slate-700">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 bg-indigo-950 border border-indigo-500 rounded flex items-center justify-center text-xs font-mono text-indigo-300 mb-1">72 PPI<br>(Layar Web)</div>
+                                    <span class="text-xs text-slate-400">Renggang Piksel</span>
+                                </div>
+                                <div class="text-2xl text-slate-500">&rarr;</div>
+                                <div class="text-center">
+                                    <div class="w-24 h-24 bg-indigo-900 border border-indigo-400 rounded flex items-center justify-center text-xs font-mono text-indigo-200 mb-1 shadow-inner">300 PPI<br>(Cetak Fisik)</div>
+                                    <span class="text-xs text-slate-400">Rapat & Padat</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Pelajari materi dasar struktur raster piksel vs kurva vektor matematis.</li>
+                                <li>Buat tabel komparasi teknis antara format JPEG (Bitmap) dan SVG (Vektor).</li>
+                                <li>Jawab studi kasus baliho pecah secara tertulis dengan argumen parameter resolusi PPI.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> Laporan analisis tertulis studi kasus dan tabel komparasi parameter dokumen dalam format PDF / Buku Catatan DKV.
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                title: "Minggu 2 (Pertemuan 3 & 4): Pengoperasian Workspace Adobe Photoshop dari Nol",
+                tp: "Peserta didik mampu mengoperasikan antarmuka kerja Adobe Photoshop dari nol, mengatur dokumen digital baru dengan parameter ukuran, resolusi, dan mode warna yang benar.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Pengenalan Adobe Photoshop:</strong> Perangkat lunak editor grafis raster standar industri global yang dikembangkan oleh Adobe Inc. Digunakan oleh fotografer, ilustrator, dan desainer grafis.</p>
+                        <p class="leading-relaxed"><strong>2. Mengenal Workspace (Ruang Kerja) dari Nol:</strong> Antarmuka terdiri dari Menu Bar, Options Bar, Toolbar di sisi kiri, serta Panels Area di sisi kanan (Layers, History, Properties).</p>
+                        <p class="leading-relaxed"><strong>3. Setup Dokumen Baru (New Document Dialog Box):</strong> Mengatur Width, Height, Resolution (Pixels/Inch), Color Mode (RGB/CMYK), dan Background Contents.</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional & Hubungan Dunia Kerja:</strong> Desainer profesional wajib menguasai tata letak panel untuk menghemat waktu pengerjaan saat merevisi desain dari klien.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PRAKTIK MINGGU 2 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Eksplorasi Workspace & Setup Dokumen Photoshop</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Praktik Komputer</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Menyiapkan dua dokumen kerja terpisah: (1) Banner Feed Instagram (72 PPI, RGB), dan (2) Poster pameran A4 (300 PPI, CMYK) sesuai permintaan klien.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual UI Photoshop</strong>
+                            <div class="p-3 bg-slate-900 rounded border border-slate-700 font-mono text-xs text-slate-400 space-y-1">
+                                <div class="text-indigo-400">[Menu Bar: File | Edit | Image | Layer | Select | Filter | View | Window]</div>
+                                <div class="flex justify-between border-t border-slate-800 pt-1">
+                                    <span>[Toolbar (Kiri)]</span>
+                                    <span class="text-slate-300">Canvas Area (Tengah)</span>
+                                    <span>[Panels: Layers & History (Kanan)]</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Buka aplikasi Adobe Photoshop dari nol, atur workspace ke mode Essentials.</li>
+                                <li>Buat dokumen Instagram (1080x1080px, RGB) dan Poster A4 (CMYK).</li>
+                                <li>Simpan file master kosong dengan penamaan format <code>NAMA_KELAS_MINGGU2.psd</code>.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> Tangkapan layar kustomisasi workspace dan file master dokumen kosong (<code>.psd</code>).
+                        </div>
+                    </div>
+                `
+            },
+            3: {
+                title: "Minggu 3 (Pertemuan 5 & 6): Seleksi Dasar & Transformasi Objek",
+                tp: "Peserta didik mampu menggunakan berbagai perangkat seleksi dasar (Marquee, Lasso, Quick Selection, Magic Wand) serta melakukan transformasi objek (Free Transform).",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Konsep Dasar Seleksi:</strong> Proses mengisolasi bagian tertentu dari gambar agar manipulasi hanya berdampak pada area tersebut tanpa merusak latar belakang.</p>
+                        <p class="leading-relaxed"><strong>2. Keluarga Alat Seleksi:</strong><br>
+                        - Marquee Tools (Rectangular & Elliptical): Untuk seleksi geometri baku.<br>
+                        - Lasso Tools: Untuk seleksi garis bebas.<br>
+                        - Quick Selection & Magic Wand: Deteksi kesamaan warna piksel berbasis AI.</p>
+                        <p class="leading-relaxed"><strong>3. Transformasi Objek (Free Transform - Ctrl + T):</strong> Mengatur skala, rotasi, dan perspektif objek agar proporsional dalam tata letak.</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional:</strong> Gunakan Shift untuk menambah seleksi (Add to Selection) dan Alt untuk mengurangi seleksi (Subtract from Selection).</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PRAKTIK MINGGU 3 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Dasar Seleksi Objek dan Transformasi Digital</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Praktik Komputer</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Menggabungkan berbagai referensi buah terpisah ke dalam satu mangkuk saji digital untuk ilustrasi kuliner majalah.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Seleksi & Transform</strong>
+                            <div class="flex items-center justify-around p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center">
+                                <div>[Foto Buah Mentah]</div>
+                                <div class="text-indigo-400">&rarr; Quick Selection &rarr;</div>
+                                <div>[Isolasi Objek]</div>
+                                <div class="text-indigo-400">&rarr; Ctrl + T &rarr;</div>
+                                <div>[Komposisi Mangkuk]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Buka foto buah mentah di Photoshop.</li>
+                                <li>Gunakan Quick Selection atau Polygonal Lasso untuk menyeleksi bentuk buah dengan rapi.</li>
+                                <li>Salin ke dokumen utama mangkuk dan gunakan Free Transform (Ctrl + T) untuk mengatur proporsi.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> File latihan format master <code>.psd</code> dan file ekspor PNG transparan.
+                        </div>
+                    </div>
+                `
+            },
+            4: {
+                title: "Minggu 4 (Pertemuan 7 & 8): Hierarki Layer, Blend Mode, & Layer Masking",
+                tp: "Peserta didik mampu mengorganisasikan hierarki layer, menerapkan Folder Group, Blend Mode, serta teknik Layer Masking non-destruktif untuk isolasi produk.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Stacking Order & Grouping:</strong> Layer bekerja seperti lembaran kaca bening bertumpuk. Pengelompokan folder (Ctrl + G) wajib dilakukan untuk kerapian dokumen.</p>
+                        <p class="leading-relaxed"><strong>2. Non-Destructive Editing dengan Layer Mask:</strong> Jangan pernah menghapus piksel secara permanen dengan Eraser biasa. Gunakan Layer Mask: Putih menyembunyikan, hitam menampilkan.</p>
+                        <p class="leading-relaxed"><strong>3. Blend Mode Populer:</strong> Multiply (menggelapkan), Screen (mencerahkan), dan Overlay (menambah kontras tekstur).</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional:</strong> Gunakan Soft Round Brush beropasitas rendah pada Layer Mask agar transisi objek tampak halus dan menyatu natural.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PRAKTIK MINGGU 4 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Manajemen Layer, Blend Mode & Layer Masking</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Praktik Komputer</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Membersihkan latar belakang foto produk sepatu dari kotoran studio dan menambahkan tekstur kertas tua artistik di belakangnya dengan Blend Mode Overlay.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Layer Mask</strong>
+                            <div class="flex items-center justify-around p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center">
+                                <div>[Layer Sepatu + Mask]</div>
+                                <div class="text-indigo-400">&rarr; Brush Hitam/Putih &rarr;</div>
+                                <div>[Layer Tekstur (Overlay)]</div>
+                                <div class="text-indigo-400">&rarr; Hasil Komposit &rarr;</div>
+                                <div>[Background Bersih]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Tambahkan Add Layer Mask pada panel layer foto sepatu.</li>
+                                <li>Gunakan Brush hitam untuk menghapus latar belakang kotor secara lembut.</li>
+                                <li>Impor tekstur kertas, letakkan di bawah layer sepatu, ubah Blend Mode menjadi Overlay.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> File master Photoshop dengan layer mask aktif (<code>.psd</code>) dan PNG transparan.
+                        </div>
+                    </div>
+                `
+            },
+            5: {
+                title: "Minggu 5 (Pertemuan 9 & 10): Seni Retouching dan Perbaikan Cacat Visual",
+                tp: "Peserta didik mampu menggunakan perangkat perbaikan gambar (Spot Healing Brush, Healing Brush, Patch Tool, & Clone Stamp) untuk memperbaiki cacat visual pada objek.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Seni Retouching:</strong> Memperbaiki ketidaksempurnaan visual seperti noda kulit, debu lensa, atau retakan dinding bangunan.</p>
+                        <p class="leading-relaxed"><strong>2. Keluarga Perangkat Retouching:</strong><br>
+                        - Spot Healing Brush: Otomatis menghapus noda kecil.<br>
+                        - Healing Brush: Sampel tekstur dengan menekan Alt.<br>
+                        - Patch Tool: Seleksi bebas pengganti tekstur.<br>
+                        - Clone Stamp Tool: Duplikasi piksel 1:1.</p>
+                        <p class="leading-relaxed"><strong>3. Tips Profesional:</strong> Selalu buat New Empty Layer dan centang Sample All Layers agar retouching bersifat non-destruktif.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PRAKTIK MINGGU 5 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Seni Retouching dan Perbaikan Cacat Visual Foto</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Praktik Komputer</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Memperbaiki foto potret model untuk poster billboard dan membersihkan retakan dinding bangunan tua menggunakan Clone Stamp & Healing Brush.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Retouching</strong>
+                            <div class="flex items-center justify-around p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center">
+                                <div>[Foto Asli Berjerawat/Retak]</div>
+                                <div class="text-indigo-400">&rarr; Alt + Click (Sampel) &rarr;</div>
+                                <div>[New Empty Layer]</div>
+                                <div class="text-indigo-400">&rarr; Clone Stamp / Healing &rarr;</div>
+                                <div>[Hasil Mulus Sempurna]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Gunakan Spot Healing Brush untuk membersihkan noda di wajah model pada layer baru.</li>
+                                <li>Gunakan Clone Stamp Tool dengan menekan Alt untuk mengambil sampel tekstur dinding utuh, lalu timpa area retak secara presisi.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> Perbandingan foto sebelum dan sesudah retouching (<code>.psd</code> & <code>.jpg</code>).
+                        </div>
+                    </div>
+                `
+            },
+            6: {
+                title: "Minggu 6 (Pertemuan 11 & 12): Color Correction & Color Grading Sinematik",
+                tp: "Peserta didik mampu melakukan koreksi pencahayaan dan warna (Levels, Curves, Color Balance) serta menciptakan Color Grading sinematik.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Adjustment Layers:</strong> Mengubah pencahayaan dan warna tanpa merusak piksel asli di bawahnya.</p>
+                        <p class="leading-relaxed"><strong>2. Parameter Vital:</strong><br>
+                        - Levels: Titik gelap, midtones, dan highlights.<br>
+                        - Curves: Kanal RGB untuk kontras tonal spesifik.<br>
+                        - Color Balance: Keseimbangan suhu warna.</p>
+                        <p class="leading-relaxed"><strong>3. Color Grading Kreatif:</strong> Mengubah foto mentah menjadi suasana emosional (gaya Teal and Orange ala film Hollywood).</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional:</strong> Akses selalu melalui panel Adjustments, bukan menu Image > Adjustments.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PRAKTIK MINGGU 6 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Color Correction dan Color Grading Sinematik</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Praktik Komputer</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Mengubah foto lanskap alam kusam menjadi bernuansa sinematik profesional untuk promosi pariwisata daerah.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Adjustment Layers</strong>
+                            <div class="flex items-center justify-around p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center">
+                                <div>[Foto Mentah Kusam]</div>
+                                <div class="text-indigo-400">&rarr; Levels (Shadows) &rarr;</div>
+                                <div>[Curves Contrast]</div>
+                                <div class="text-indigo-400">&rarr; Color Balance (Teal/Orange) &rarr;</div>
+                                <div>[Hasil Sinematik]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Tambahkan Adjustment Layer Levels untuk mengangkat detail area bayangan (shadows).</li>
+                                <li>Gunakan Curves untuk mempertajam kontras tonal.</li>
+                                <li>Tambahkan Color Balance / Hue/Saturation untuk nuansa Teal and Orange.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> File master Photoshop dengan Adjustment Layer utuh (<code>.psd</code>) dan hasil ekspor (<code>.jpg</code>).
+                        </div>
+                    </div>
+                `
+            },
+            7: {
+                title: "Minggu 7 (Pertemuan 13 & 14): Tipografi Lanjutan & Tata Letak Poster Komersial",
+                tp: "Peserta didik mampu mengatur tipografi tingkat lanjut (tracking, leading, visual hierarchy) serta menyusun tata letak poster promosi komersial yang efektif.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Tipografi dalam Bitmap:</strong> Teks sebagai objek vektor yang disematkan dalam dokumen raster.</p>
+                        <p class="leading-relaxed"><strong>2. Parameter Vital:</strong><br>
+                        - Visual Hierarchy: Urutan baca mata audiens.<br>
+                        - Tracking & Kerning: Spasi antar huruf.<br>
+                        - Leading: Spasi antar baris.</p>
+                        <p class="leading-relaxed"><strong>3. Komposisi Poster:</strong> Menerapkan Rule of Thirds agar informasi promosi tersampaikan dalam waktu cepat.</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional:</strong> Berikan Drop Shadow tipis atau shape transparan di bawah teks agar kontras dengan latar belakang ramai.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PRAKTIK MINGGU 7 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Tipografi Lanjutan & Tata Letak Poster Promosi</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Praktik Komputer</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Membuat poster promosi diskon kafe lokal dengan teks informasi mencolok namun harmonis di atas foto latar belakang makanan.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Hierarki Tipografi</strong>
+                            <div class="p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center space-y-1">
+                                <div class="font-bold text-base text-indigo-400">[HEADLINE DISKON BESAR]</div>
+                                <div class="text-slate-300">[Sub-Headline & Penjelasan Syarat Ketentuan]</div>
+                                <div class="text-slate-400">[Call to Action / Alamat Kafe]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Susun tipografi informasi promo dengan menerapkan prinsip hierarki visual.</li>
+                                <li>Atur tracking dan leading teks agar rapi dan terbaca jelas.</li>
+                                <li>Tambahkan shape transparan di bawah blok teks untuk menjaga kontras keterbacaan.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> File poster promosi format <code>.psd</code> dan hasil ekspor <code>.jpg</code>.
+                        </div>
+                    </div>
+                `
+            },
+            8: {
+                title: "Minggu 8 (Pertemuan 15 & 16): Riset Brief, Moodboard, Sketsa, & Komposisi Composite",
+                tp: "Peserta didik mampu merencanakan proyek besar melalui riset brief dan moodboard, memproduksi composite image realistis, serta menyelaraskan pencahayaan.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Project Brief & Riset:</strong> Menerjemahkan kebutuhan klien ke dalam arahan seni (art direction) yang terarah.</p>
+                        <p class="leading-relaxed"><strong>2. Moodboard & Sketsa Layout:</strong> Papan inspirasi visual dari Pinterest/Behance dan sketsa kasar di atas kertas.</p>
+                        <p class="leading-relaxed"><strong>3. Composite Image:</strong> Menggabungkan elemen foto berbeda menjadi satu kesatuan realistis dengan menyelaraskan arah cahaya dan bayangan.</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional:</strong> Pastikan stok foto memiliki angle dan arah pencahayaan searah agar hasil gabungan tidak janggal.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PROJECT MINGGU 8 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Riset, Moodboard, Sketsa & Komposisi Proyek Utama</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Proyek Tahap 1</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Merancang poster kampanye komersial / layanan masyarakat berdasarkan brief klien fiktif agensi periklanan.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Tahapan Pra-Produksi</strong>
+                            <div class="flex items-center justify-around p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center">
+                                <div>[Brief Klien]</div>
+                                <div class="text-indigo-400">&rarr; Moodboard &rarr;</div>
+                                <div>[Sketsa Layout]</div>
+                                <div class="text-indigo-400">&rarr; Composite BG &rarr;</div>
+                                <div>[Tahap 1 Selesai]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Cari referensi visual dan susun dokumen Moodboard digital di Photoshop.</li>
+                                <li>Buat sketsa layout kasar di buku sketsa.</li>
+                                <li>Kumpulkan aset foto bersih dan mulai susun latar belakang composite image.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> Dokumen Moodboard (<code>.jpg</code>), foto sketsa layout, dan file progres Photoshop tahap 1 (<code>.psd</code>).
+                        </div>
+                    </div>
+                `
+            },
+            9: {
+                title: "Minggu 9 (Pertemuan 17 & 18): Finishing Detail, Peer Review, & Portofolio Digital",
+                tp: "Peserta didik mampu menyempurnakan detail proyek besar, melakukan evaluasi silang melalui peer review, mengekspor karya, dan menyusun portofolio digital akhir.",
+                materi: `
+                    <div class="space-y-4">
+                        <p class="leading-relaxed"><strong>1. Finishing & Polish:</strong> Menambahkan bayangan manual (brush shadow) dan menyelaraskan warna akhir.</p>
+                        <p class="leading-relaxed"><strong>2. Peer Review:</strong> Evaluasi silang antar teman untuk kritik konstruktif dan perbaikan karya.</p>
+                        <p class="leading-relaxed"><strong>3. Portofolio Digital:</strong> Mengemas karya terbaik semester ini ke dalam dokumen presentasi PDF standar industri.</p>
+                        <p class="leading-relaxed"><strong>4. Tips Profesional:</strong> Ekspor JPG 300 PPI untuk cetak dan PNG terkompresi untuk portofolio digital.</p>
+                    </div>
+                `,
+                lkpd: `
+                    <div class="bg-slate-900 border border-slate-700/80 rounded-xl p-6 space-y-4">
+                        <div class="border-b border-slate-800 pb-3">
+                            <span class="text-xs font-bold text-indigo-400 uppercase tracking-widest">LKPD PROJECT MINGGU 9 (PROFESIONAL & TERSTRUKTUR)</span>
+                            <h5 class="text-lg font-bold text-white mt-1">Finalisasi Proyek Besar, Peer Review & Portofolio Digital</h5>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300">
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">A. Identitas & Alokasi Waktu</strong>
+                                <p>Mata Pelajaran: Perangkat Lunak Desain (Photoshop)<br>Alokasi Waktu: 4 JP (180 Menit) | Finalisasi & Portofolio</p>
+                            </div>
+                            <div class="bg-slate-800/60 p-4 rounded-lg border border-slate-700/50">
+                                <strong class="text-indigo-300 block mb-1">B. Studi Kasus Nyata Industri</strong>
+                                <p>Menyelesaikan karya poster kampanye utama, menerima evaluasi peer review, dan mengemasnya ke dalam portofolio digital siap pamer.</p>
+                            </div>
+                        </div>
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700/50 text-sm text-slate-300">
+                            <strong class="text-indigo-300 block mb-2">C. Ilustrasi Representasi Visual Portofolio Akhir</strong>
+                            <div class="flex items-center justify-around p-3 bg-slate-900 rounded border border-slate-700 text-xs text-center">
+                                <div>[Karya Master .PSD]</div>
+                                <div class="text-indigo-400">&rarr; Peer Review &rarr;</div>
+                                <div>[Ekspor JPG/PDF]</div>
+                                <div class="text-indigo-400">&rarr; Packaging &rarr;</div>
+                                <div>[Portofolio Digital Siap Pamer]</div>
+                            </div>
+                        </div>
+                        <div class="text-sm text-slate-300 space-y-2">
+                            <strong class="text-indigo-300 block">D. Langkah Kerja & Tugas Siswa:</strong>
+                            <ol class="list-decimal pl-5 space-y-1">
+                                <li>Lakukan perbaikan detail karya berdasarkan catatan peer review.</li>
+                                <li>Ekspor karya ke format publikasi akhir (JPG resolusi tinggi & PDF).</li>
+                                <li>Susun karya latihan, retouching, dan poster utama ke dalam template portofolio digital profesional.</li>
+                            </ol>
+                        </div>
+                        <div class="bg-indigo-950/40 p-4 rounded-lg border border-indigo-800/50 text-xs text-indigo-200">
+                            <strong>Hasil yang Dikumpulkan:</strong> File master Photoshop akhir (<code>.psd</code>), file poster publikasi (<code>.jpg</code>), dan Dokumen Portofolio Digital interaktif (<code>.pdf</code>).
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function switchTab(tabId) {
+            document.getElementById('tab-overview').classList.add('hidden');
+            document.getElementById('tab-weeks').classList.add('hidden');
+            document.getElementById('tab-rubric').classList.add('hidden');
+
+            document.getElementById('btn-overview').className = "px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-slate-700 text-slate-300 transition hover:bg-slate-600 shadow";
+            document.getElementById('btn-weeks').className = "px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-slate-700 text-slate-300 transition hover:bg-slate-600 shadow";
+            document.getElementById('btn-rubric').className = "px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-slate-700 text-slate-300 transition hover:bg-slate-600 shadow";
+
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            document.getElementById('btn-' + tabId).className = "px-3 py-1.5 text-xs sm:text-sm font-medium rounded-lg bg-indigo-600 text-white transition hover:bg-indigo-500 shadow";
+        }
+
+        function selectWeek(weekNum) {
+            const pills = document.querySelectorAll('.week-pill');
+            pills.forEach((p, idx) => {
+                if ((idx + 1) === weekNum) {
+                    p.className = "week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-indigo-600 text-white shadow-md";
+                } else {
+                    p.className = "week-pill px-4 py-2 rounded-xl text-sm font-semibold whitespace-nowrap bg-slate-800 text-slate-300 hover:bg-slate-700";
+                }
+            });
+
+            const data = weeksData[weekNum];
+            const container = document.getElementById('week-content-container');
+            container.innerHTML = `
+                <div class="border-b border-slate-700 pb-4 mb-6">
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 mb-2 inline-block">Blok 2 - Pertemuan ${weekNum * 2 - 1} & ${weekNum * 2}</span>
+                    <h3 class="text-xl sm:text-2xl font-bold text-white">${data.title}</h3>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-2">Tujuan Pembelajaran</h4>
+                        <p class="text-slate-300 bg-slate-900/50 p-4 rounded-xl border border-slate-700/50 leading-relaxed text-sm sm:text-base">${data.tp}</p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-2">Materi Pembelajaran Mendalam (Detail & Komprehensif)</h4>
+                        <div class="text-slate-300 bg-slate-900/50 p-5 rounded-xl border border-slate-700/50 text-sm sm:text-base space-y-3">
+                            ${data.materi}
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-sm font-semibold text-indigo-400 uppercase tracking-wider mb-2">Lembar Kerja Peserta Didik (LKPD Profesional & Bergambar)</h4>
+                        ${data.lkpd}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize week 1 on load
+        window.onload = function() {
+            selectWeek(1);
+        }
+    </script>
+
+</body>
+</html>
